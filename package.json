@@ -1,0 +1,13 @@
+{
+  "name": "gst-order",
+  "description": "Order builder for GTS inventory",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.9.5",
+    "jade": "^1.7.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
