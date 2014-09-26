@@ -3,12 +3,33 @@ html
     title!= title
     script(src="bower_components/modernizr/modernizr.js")
     link(rel="stylesheet", href="bower_components/foundation/css/foundation.css")
-
+    link(rel="stylesheet", href="stylesheets/app.css")
 
   body
     .row
       .columns.small-12
-        h1!= message
+        h1 Check Inventory
+
+        table
+          thead
+            tr
+              th Qty Desired
+              th Item Number
+              th Product Name
+              th Warhouse Availability
+          tbody
+
+        form(action='/item' method='post')
+          fieldset
+            .row
+              label.small-12.large-6.columns QTY Desired
+                input(type='text' name='qty' value='1')
+              label.small-12.large-6.columns SKU
+                input(type='text' name='sku' placeholder='PIP72077')
+            .row
+              .small-12.columns
+                button Add Item
 
     script(src="bower_components/jquery/dist/jquery.min.js")
     script(src="bower_components/foundation/js/foundation.min.js")
+    script(src="javascripts/app.js")
